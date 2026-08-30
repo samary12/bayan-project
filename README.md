@@ -18,3 +18,25 @@
 
 ### Evidence
 DAY1_NOTEBOOK2_CORE=PASS
+
+## Day 2 — Text Classification
+
+### Model
+Multilingual DistilBERT
+
+### Baseline
+TF-IDF + Logistic Regression
+
+### Data Split
+Group-based split to prevent data leakage
+
+### Fine-tuning
+One real training step
+
+### Results
+- Validation Macro-F1: 1.0
+- Test Macro-F1: 0.8667
+- Test Accuracy: 0.875
+
+### Evidence
+DAY2_NOTEBOOK3_CORE=PASS
