@@ -9,7 +9,7 @@
 - Gate A status: complete
 
 ### Gate A Commit
-- Commit: TODO
+- Commit: https://github.com/samary12/bayan-project/commit/b2d1053fb86c81d464c35656b02696b130bec85d
 
 ## Day 2 — Gate B
 
