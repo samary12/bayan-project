@@ -40,3 +40,27 @@ One real training step
 
 ### Evidence
 DAY2_NOTEBOOK3_CORE=PASS
+
+## Day 3 — Arabic NLP, Semantic Search & Evaluation
+
+### Arabic NLP
+Arabic preprocessing uses a documented search profile while preserving the original display copy.
+
+### Semantic Search
+- Embedding model: `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`
+- L2-normalised corpus and query embeddings
+- FAISS `IndexFlatIP`
+- Test Recall@3: 1.0
+- Test MRR@3: 0.6667
+- Results labeled as `MEASURED_SMOKE`
+
+### Evaluation
+- Macro-F1 with bootstrap 95% CI
+- Paired comparison between prediction sets
+- Slice evaluation and error taxonomy
+- Day 3 tests: 19 passed
+
+### Evidence
+- `DAY3_NOTEBOOK5_CORE=PASS`
+- `DAY3_NOTEBOOK6_CORE=PASS`
+- `DAY3_NOTEBOOK7_CORE=PASS`
