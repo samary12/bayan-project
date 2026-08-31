@@ -64,3 +64,23 @@ Arabic preprocessing uses a documented search profile while preserving the origi
 - `DAY3_NOTEBOOK5_CORE=PASS`
 - `DAY3_NOTEBOOK6_CORE=PASS`
 - `DAY3_NOTEBOOK7_CORE=PASS`
+
+## Day 4 — Optimization & Serving
+
+- Gate D: PASS
+- Notebook 08: `DAY4_NOTEBOOK8_CORE=PASS`
+- Artefact role: `PROJECT_ARTIFACT`
+- Result label: `MEASURED`
+- Selected runtime: `onnx-fp32`
+- PyTorch FP32 p95 latency: `237.746 ms`
+- ONNX FP32 p95 latency: `184.258 ms`
+- ONNX FP32 quality tax: `0.0`
+- Decision: `ADOPT_ONNX_FP32`
+- Day 4 tests: `38 passed`
+- Final submission tests: `14 passed`
+
+### Day 4 reports
+
+- `BENCHMARKS.md`
+- `reports/benchmark_results.json`
+- `reports/service_smoke.json`
