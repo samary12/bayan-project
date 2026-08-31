@@ -1,5 +1,19 @@
 
 # Decisions
+## Day 1 — Tokenizer decision
+
+Checkpoint/tokenizer: `google-bert/bert-base-multilingual-cased` for comparison; local WordPiece tokenizer used for measured fertility/truncation metrics.
+
+Corpus slice: Small mixed Arabic-English synthetic sample.
+
+Arabic fertility [MEASURED]: 1.39
+English fertility [MEASURED]: 1.32
+Truncation rate at max_length=8 [MEASURED]: 40%
+Truncation rate at max_length=12 [MEASURED]: 0%
+
+Known limitation: Measurements are based on a very small synthetic sample, and the fertility/truncation values were measured using the local WordPiece tokenizer rather than the mBERT tokenizer.
+
+Decision and reason: Keep the local WordPiece tokenizer for the Core reproducible workflow, while using `google-bert/bert-base-multilingual-cased` as the external multilingual comparison checkpoint. The local tokenizer works offline and produces documented measurable behaviour, while mBERT provides a realistic multilingual reference when network access is available.
 
 ## Day 2 — Gate B
 
