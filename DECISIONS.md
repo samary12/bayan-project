@@ -94,3 +94,29 @@ Decision and reason: Keep the local WordPiece tokenizer for the Core reproducibl
 - The confidence interval must be reported together with the metric because the validation sample is small.
 - The paired comparison does not show reliable evidence that one prediction set is better than the other because the interval includes zero.
 - Slice and error-taxonomy analysis are used to identify specific failure modes instead of relying only on the overall average.
+
+## Day 4 — Gate D
+
+### Serving optimisation decision
+
+- Artefact role: `PROJECT_ARTIFACT`
+- Result label: `MEASURED`
+- Selected runtime: `onnx-fp32`
+- Decision: `ADOPT_ONNX_FP32`
+
+### Evidence
+
+- PyTorch FP32 p95 latency: `237.746 ms`
+- ONNX FP32 p95 latency: `184.258 ms`
+- ONNX FP32 throughput: `46.419 items/s`
+- ONNX FP32 prediction agreement: `1.0`
+- ONNX FP32 quality tax: `0.0`
+- ONNX FP32 budget: PASS
+
+### INT8 decision
+
+Dynamic INT8 was faster, but it was rejected because prediction agreement dropped to `0.5` and quality tax increased to `0.565476`, exceeding the project quality budget.
+
+### Rollback
+
+If ONNX FP32 causes a deployment issue, revert to the recorded PyTorch FP32 project model and re-export from the saved model source.
