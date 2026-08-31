@@ -25,3 +25,16 @@
 ### Gate B Commit
 
 Commit: https://github.com/samary12/bayan-project/commit/aead514f4fa69a9a0116f9c872d2c53c7f1d07f0
+
+## Day 3 — Gate C
+
+- Notebook 05 Arabic NLP: PASS
+- Notebook 06 Semantic Search: PASS
+- Notebook 07 Evaluation and Error Analysis: PASS
+- Day 3 tests: 19 passed
+- Evaluation report: complete
+- Model card: complete
+- Gate C status: complete
+
+### Gate C Commit
+- Commit: TODO
