@@ -149,3 +149,7 @@ ONNX هو صيغة لتمثيل النموذج، بينما ONNX Runtime هو م
 
 7. ما الدليل الذي يجعلك تثق بأهم رقم في مشروعك؟
 أن الرقم ناتج من تشغيل فعلي قابل لإعادة الإنتاج، مع workload معروف، إعدادات موثقة، عدد تكرارات كافٍ، ونتائج محفوظة في تقارير مثل `benchmark_results.json`.
+
+### Gate D checkpoint
+
+https://github.com/samary12/bayan-project/commit/3ec2cb2e0abfe8a598091850af42895cd9aa36ee
