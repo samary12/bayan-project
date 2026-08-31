@@ -100,3 +100,29 @@ Recall@k يقيس هل النتيجة الصحيحة ظهرت ضمن أول k ن
   
 ### Gate C Commit
 - Commit:https://github.com/samary12/bayan-project/commit/a4577ca2671192fac1623f5aa793c96be433216c
+
+## Day 4 — Gate D
+
+- `notebooks/08_optimization_serving.ipynb`: `DAY4_NOTEBOOK8_CORE=PASS`
+- Artefact role: `PROJECT_ARTIFACT`
+- Result label: `MEASURED`
+- Selected runtime: `onnx-fp32`
+- Adoption decision: `ADOPT_ONNX_FP32`
+- Benchmark report: `BENCHMARKS.md`
+- Benchmark JSON: `reports/benchmark_results.json`
+- Service smoke report: `reports/service_smoke.json`
+- Day 4 tests: `38 passed in 0.16s`
+
+### Serving smoke
+
+- `/health`: PASS
+- Arabic request: PASS
+- English request: PASS
+- Empty request rejected: PASS
+- Unsupported language rejected: PASS
+- Arabic canary: PASS
+- English canary: PASS
+
+### Gate D status
+
+`PASS`
