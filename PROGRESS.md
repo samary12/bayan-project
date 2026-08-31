@@ -11,7 +11,7 @@
 ### Gate A Commit
 - Commit: https://github.com/samary12/bayan-project/commit/b2d1053fb86c81d464c35656b02696b130bec85d
 
-Exit Ticket
+### Exit Ticket
 
 1. Why is `text.split()` not enough for BERT?  
 لأن BERT يستخدم tokenizer مرتبط بالـcheckpoint وقد يقسم الكلمات إلى subwords، بينما `text.split()` يفصل النص فقط حسب المسافات.
@@ -77,6 +77,26 @@ Commit: https://github.com/samary12/bayan-project/commit/aead514f4fa69a9a0116f9c
 - Evaluation report: complete
 - Model card: complete
 - Gate C status: verified complete
-- 
+
+### Exit Ticket
+
+1. لماذا نحفظ display copy مستقلة؟
+لأن display copy تحفظ النص الأصلي للعرض، بينما نسخة المعالجة قد تتغير بسبب normalization أو preprocessing.
+
+2. لماذا يجب تطبيع corpus وquery معًا؟
+لأن لازم يكونون بنفس طريقة المعالجة والتمثيل، وإلا المقارنة بين embeddings تصير غير عادلة أو غير دقيقة.
+
+3. ما الفرق بين Recall@k وMRR@k؟
+Recall@k يقيس هل النتيجة الصحيحة ظهرت ضمن أول k نتائج، بينما MRR@k يهتم أيضًا بترتيب أول نتيجة صحيحة؛ كلما ظهرت أبكر كان أفضل.
+
+4. ماذا يعني أن CI للفرق تشمل الصفر؟
+يعني ما عندنا دليل كافٍ أن أحد النموذجين أفضل فعلاً من الآخر؛ لأن الفرق الحقيقي ممكن يكون صفر.
+
+5. لماذا نجري error analysis على validation؟
+لأننا نستخدم validation لفهم الأخطاء واختيار التحسينات بدون لمس test، حتى يبقى test تقييمًا نهائيًا غير متحيز.
+
+6. ما الذي يجبرك على إعادة بناء FAISS index؟
+إذا تغيرت embeddings أو preprocessing أو embedding model أو corpus، لازم نعيد بناء الـFAISS index حتى يظل متوافقًا مع البيانات والتمثيلات الجديدة.
+  
 ### Gate C Commit
 - Commit:https://github.com/samary12/bayan-project/commit/a4577ca2671192fac1623f5aa793c96be433216c
