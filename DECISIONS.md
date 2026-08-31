@@ -48,3 +48,35 @@
 - Threshold: `0.4592095613479614`
 - The threshold was tuned on the validation split only.
 - The selected threshold was then frozen and applied to the test split.
+
+## Day 3 — Evaluation and Error Analysis
+
+### Evaluation
+- Evaluation data: `COURSE_FIXTURE`
+- Split: validation only
+- The fixture is used for learning the evaluation workflow and is not a production benchmark.
+- Macro-F1 was evaluated with a 95% bootstrap confidence interval.
+- A paired bootstrap comparison was used to compare predictions A and B.
+- The paired confidence interval includes zero, so the observed difference does not support a directional claim.
+
+### Error Analysis and Fixes
+
+1. **Gulf coverage for health and transport**
+   - Evidence: `dialect_gap` tags in the validation fixture.
+   - Change: Collect/review targeted Gulf examples.
+   - Acceptance test: New behavioural cases plus sliced CI.
+
+2. **Class confusion around app/status wording**
+   - Evidence: `EV-019` and `EV-020`.
+   - Change: Add contrastive examples and review the label guide.
+   - Acceptance test: Paired comparison without regression in other slices.
+
+3. **Underspecified short requests**
+   - Evidence: `hard_or_ambiguous` tags.
+   - Change: Request context or abstain when confidence is low.
+   - Acceptance test: Ambiguity behavioural suite.
+
+### Interpretation
+- The confidence interval must be reported together with the metric because the validation sample is small.
+- The paired comparison does not show reliable evidence that one prediction set is better than the other because the interval includes zero.
+- Slice and error-taxonomy analysis are used to identify specific failure modes instead of relying only on the overall average.
