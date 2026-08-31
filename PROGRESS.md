@@ -11,4 +11,4 @@
 
 ### Gate B Commit
 
-Commit: https://github.com/samary12/bayan-project/commit/8b680f598caa679a9281a8b35e55125a3e269102
+Commit: https://github.com/samary12/bayan-project/commit/aead514f4fa69a9a0116f9c872d2c53c7f1d07f0
