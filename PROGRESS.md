@@ -1,5 +1,16 @@
 # Progress
 
+## Day 1 — Gate A
+
+- Notebook 01 Text Processing & Tokenisation: PASS
+- Notebook 02 Attention & Transformers: PASS
+- Day 1 tests: 9 passed
+- Tokenizer decision: complete
+- Gate A status: complete
+
+### Gate A Commit
+- Commit: TODO
+
 ## Day 2 — Gate B
 
 - Text Classification: DAY2_NOTEBOOK3_CORE=PASS
