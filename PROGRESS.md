@@ -37,4 +37,4 @@ Commit: https://github.com/samary12/bayan-project/commit/aead514f4fa69a9a0116f9c
 - Gate C status: verified complete
 - 
 ### Gate C Commit
-- Commit: https://github.com/samary12/bayan-project/commit/d838cd80d29ba5f498f2adfa051b6187e002aed1
+- Commit:https://github.com/samary12/bayan-project/commit/a4577ca2671192fac1623f5aa793c96be433216c
