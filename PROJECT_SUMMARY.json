@@ -1,0 +1,14 @@
+{
+  "student_github": "samary12",
+  "repository_url": "https://github.com/samary12/bayan-project",
+  "languages": ["ar", "en"],
+  "tasks": ["classification", "sentiment", "ner", "qa", "semantic_search"],
+  "extension": {
+    "name": "cross_encoder_reranking",
+    "evidence": "notebooks/06_semantic_search.ipynb and reports/retrieval_metrics.json"
+  },
+  "benchmark_mode": "PROJECT_ARTIFACT",
+  "final_tag": "submission-v1.0",
+  "privacy_check": true,
+  "tests_passed": true
+}
