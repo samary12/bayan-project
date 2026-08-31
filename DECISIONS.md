@@ -31,3 +31,20 @@
 
 ### Limitation
 - The small synthetic dataset cannot prove production-level model quality or generalization to real-world data.
+
+- ## Day 3 — Semantic Search
+
+### Model
+- Embedding model: `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`
+- Model card: Hugging Face model card
+- License: Apache-2.0
+
+### Retrieval
+- Index type: FAISS `IndexFlatIP`
+- Embeddings are L2-normalised for both corpus and query.
+- Results are labeled as `MEASURED_SMOKE`.
+
+### No-answer threshold
+- Threshold: `0.4592095613479614`
+- The threshold was tuned on the validation split only.
+- The selected threshold was then frozen and applied to the test split.
