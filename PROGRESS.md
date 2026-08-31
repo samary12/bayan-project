@@ -11,6 +11,32 @@
 ### Gate A Commit
 - Commit: https://github.com/samary12/bayan-project/commit/b2d1053fb86c81d464c35656b02696b130bec85d
 
+Exit Ticket
+
+1. Why is `text.split()` not enough for BERT?  
+لأن BERT يستخدم tokenizer مرتبط بالـcheckpoint وقد يقسم الكلمات إلى subwords، بينما `text.split()` يفصل النص فقط حسب المسافات.
+
+2. Why should the tokenizer and model come from the same checkpoint?  
+لأن الـtoken IDs والـvocabulary لازم تتطابق مع الـembeddings التي تدرب عليها الموديل.
+
+3. Give an example of an Arabic transformation that may remove information.  
+إزالة التشكيل؛ لأنها قد تزيل فرقًا لغويًا أو تغيّر المعنى في بعض الحالات.
+
+4. What does Fertility measure, and what does it not prove?  
+تقيس متوسط عدد الـtokens الناتجة لكل كلمة تقريبًا، لكنها لا تثبت أن tokenizer أفضل للمهمة؛ هي فقط تقيس مقدار التجزئة.
+
+5. What is the difference between a Token ID and an Embedding?  
+Token ID هو رقم يمثل token داخل الـvocabulary، أما Embedding فهو متجه عددي يمثل هذا الـtoken داخل النموذج.
+
+6. What is the shape of the attention matrix for a sequence of length `n` in one head?  
+تكون `n × n`، لأن كل token يمكن أن يوزع انتباهه على كل الـtokens في التسلسل.
+
+7. Why are attention scores divided by `sqrt(d_k)`?  
+حتى لا تصبح القيم كبيرة جدًا قبل softmax، وهذا يساعد على استقرار حساب الـattention.
+
+8. Why should attention weights not automatically be presented as a causal explanation?  
+لأنها توضح أين ركزت آلية attention، لكنها لا تثبت أن هذا الجزء هو السبب الحقيقي في قرار النموذج.
+
 ## Day 2 — Gate B
 
 - Text Classification: DAY2_NOTEBOOK3_CORE=PASS
@@ -23,14 +49,19 @@
 ### Exit Ticket
 
 1. Why baseline before Transformer?
+   
     عشان يكون عندنا مرجع بسيط نقارن فيه، ونعرف هل الـTransformer فعلاً حسّن الأداء أو لا.
-2. What does group_id prevent?
+3. What does group_id prevent?
+   
     يمنع تسرب البيانات بين train وvalidation وtest، بحيث العينات المرتبطة بنفس المجموعة ما تتوزع على أكثر من split.
-3. Why use -100 in NER?
+5. Why use -100 in NER?
+   
     عشان الـloss يتجاهل special tokens والـsubwords اللي ما نبغى نحسبها أثناء التدريب.
-4. Why must QA not always extract an answer?
+7. Why must QA not always extract an answer?
+   
     لأن بعض الأسئلة ما يكون لها جواب داخل الـcontext، وفي هالحالة المفروض يرجع None بدل ما يخترع إجابة.
-5. Difference between MEASURED_SMOKE and production result?
+9. Difference between MEASURED_SMOKE and production result?
+    
     MEASURED_SMOKE نتيجة اختبار صغيرة تثبت أن الـpipeline يشتغل بشكل صحيح، لكنها ما تثبت جودة النموذج في بيئة إنتاج أو على بيانات حقيقية واسعة.
    
 ### Gate B Commit
