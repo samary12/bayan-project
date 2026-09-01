@@ -84,3 +84,9 @@ Arabic preprocessing uses a documented search profile while preserving the origi
 - `BENCHMARKS.md`
 - `reports/benchmark_results.json`
 - `reports/service_smoke.json`
+  
+## Course Attribution
+
+This project was completed as part of **SDA-AIE-211** through **SDAIA Academy**, under the instruction of **Meaad Al-Marri**.
+
+- SDAIA Academy GitHub: https://github.com/SDAIAAcademy
