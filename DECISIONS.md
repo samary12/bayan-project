@@ -30,7 +30,7 @@ Decision and reason: Keep the local WordPiece tokenizer for the Core reproducibl
 - Leakage check: Zero group overlap between train, validation, and test sets (`group_overlap = 0`).
 
 ### Classification
-- Baseline: TF-IDF + Logistic Regression
+- Baseline: TF-IDF + LinearSVC
 - Baseline metric: Validation macro-F1 = 0.6667 (MEASURED_SMOKE)
 - Transformer metric: Validation macro-F1 = 1.0 (MEASURED_SMOKE)
 - Results are labeled as `MEASURED_SMOKE`.
