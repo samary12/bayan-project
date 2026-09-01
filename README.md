@@ -25,7 +25,7 @@ DAY1_NOTEBOOK2_CORE=PASS
 Multilingual DistilBERT
 
 ### Baseline
-TF-IDF + Logistic Regression
+TF-IDF + LinearSVC
 
 ### Data Split
 Group-based split to prevent data leakage
