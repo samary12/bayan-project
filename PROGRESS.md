@@ -153,3 +153,15 @@ ONNX هو صيغة لتمثيل النموذج، بينما ONNX Runtime هو م
 ### Gate D checkpoint
 
 https://github.com/samary12/bayan-project/commit/3ec2cb2e0abfe8a598091850af42895cd9aa36ee
+
+## — Gate E (Final Submission)
+
+- Final validation: `validate_submission.py --require-tag` -> PASS
+- Contracts verified: `PROJECT_SUMMARY.json`, `SUBMISSION.yml`
+- Tag & Release created: `submission-v1.0`
+- Clean repo audit: No weights, cache, or raw PII committed.
+- Gate E status: complete
+
+### Gate E Release & Commit
+- Release: https://github.com/samary12/bayan-project/releases/tag/submission-v1.0
+- Commit: https://github.com/samary12/bayan-project/commit/c9a843d
